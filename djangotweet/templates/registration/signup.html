@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+
+{%block content%}
+
+   
+<div class="container" style="border: 3px solid rgba(14, 66, 114, 0.87);padding: 10px;">
+              
+    
+      <form method="POST"  action= "">  
+       
+        {%csrf_token%}
+         {%for field in form%}
+         <div class="mb-3">
+            {{field.label_tag}}
+            {{field}}
+         </div>
+         {% endfor %}
+        <button type="submit" class="btn btn-primary" value="signup">Signup</button>
+       </form>
+</div>   
+
+
+
+ {% endblock %}
